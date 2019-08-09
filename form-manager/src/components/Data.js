@@ -9,12 +9,16 @@ class Data extends React.Component {
         }
     }
 
+    stateSetter = (newdata) => {
+        this.setState({data: newdata})
+    }
+
     componentDidMount(){
     axios
     .get("http://localhost:5000/api/restricted/data")
     .then(res => {
         console.log('Data Received', res)
-        this.setState({data: res.data})
+        this.stateSetter(res.data)
     })   
     .catch(err => {
         console.log('Request failed')
