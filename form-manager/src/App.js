@@ -1,18 +1,17 @@
 import React from 'react';
 
+import FormikForm from './components/Form';
+import Data from './components/Data';
+
 import './App.css';
 
 class App extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-
-    }
-  }
 
   render() {
     return (
-      <div>
+      <div className="App">
+        <FormikForm />
+        <Data />
       </div>
     );
   }
